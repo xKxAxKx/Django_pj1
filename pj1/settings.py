@@ -25,8 +25,9 @@ SECRET_KEY = '^4^zs&w&o-8&_z)&x!4(#j@svk-x_)c*)n8x^e6o472fqju1@j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["192.168.33.10"]
+INTERNAL_IPS = ('127.0.0.1', '192.168.33.1',)
 
+ALLOWED_HOSTS = ["192.168.33.10"]
 
 # Application definition
 
@@ -131,3 +132,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TEMPLATE_CONTEXT': True,
+}
